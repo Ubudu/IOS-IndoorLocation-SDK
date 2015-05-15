@@ -1,1 +1,1 @@
-# IOS-IndoorLocation-SDK
+# Ubudu Indoor Location SDK for iOS
