@@ -13,27 +13,27 @@
 
 @interface UBUPositionUpdate : NSObject
 
-/*
- * The raw estimated position of the device on the map.
+/**
+ *  The raw estimated position of the device on the map.
  */
 @property (nonatomic, readonly) CGPoint estimatedPosition;
 
-/*
- * Position smoothed over N last estimated positions.
+/**
+ * Position smoothed over time.
  */
 @property (nonatomic, readonly) CGPoint smoothedPosition;
 
-/*
+/**
  * The closest navigable point from the current position.
  */
 @property (nonatomic, readonly) CGPoint closestNavigablePoint;
 
-/*
+/**
  * The closest beacon from the current navigable position.
  */
 @property (nonatomic, strong, readonly) UBUBeacon *closestBeacon;
 
-/*
+/**
  * The closest zone from the current navigable position.
  */
 @property (nonatomic, strong, readonly) UBUZone *closestZone;
