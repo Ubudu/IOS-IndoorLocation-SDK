@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="686-0i-xZ4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Ubudu Indoor Location SDK-->
+        <scene sceneID="k9P-Aa-jxH">
+            <objects>
+                <viewController id="51t-zg-Jdf" customClass="PositionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NU5-is-hZ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="aTW-8U-hJF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I4P-b1-23g">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a48-yS-S6s">
+                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5bT-Ei-shJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Show Map">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.78159265350877183" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Loading"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="51t-zg-Jdf" eventType="touchUpInside" id="lPd-0S-V8b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aTW-8U-hJF" firstAttribute="top" secondItem="a48-yS-S6s" secondAttribute="bottom" id="EBW-b6-I8P"/>
+                            <constraint firstItem="a48-yS-S6s" firstAttribute="leading" secondItem="I4P-b1-23g" secondAttribute="leading" id="b4h-oh-Qd0"/>
+                            <constraint firstAttribute="trailing" secondItem="a48-yS-S6s" secondAttribute="trailing" id="m7B-k4-EnN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ubudu Indoor Location SDK" id="1XX-eS-4ih"/>
+                    <connections>
+                        <outlet property="showMapButton" destination="a48-yS-S6s" id="Wdd-QM-PfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MvH-Ht-f00" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="403"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jWR-Pr-SBJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="686-0i-xZ4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4zY-Gt-XMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="51t-zg-Jdf" kind="relationship" relationship="rootViewController" id="RWS-90-Y4N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VU-WJ-3gv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="403"/>
+        </scene>
+    </scenes>
+</document>
