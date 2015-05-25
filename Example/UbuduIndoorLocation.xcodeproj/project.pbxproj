@@ -13,7 +13,6 @@
 		A457DE221B0E1B4000277EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A457DE201B0E1B4000277EDC /* Main.storyboard */; };
 		A457DE241B0E1B4000277EDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A457DE231B0E1B4000277EDC /* Images.xcassets */; };
 		A457DE271B0E1B4000277EDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A457DE251B0E1B4000277EDC /* LaunchScreen.xib */; };
-		A457DE331B0E1B4100277EDC /* UbuduIndoorLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A457DE321B0E1B4100277EDC /* UbuduIndoorLocationTests.m */; };
 		A46AA6FA1B0E3BA60088A6DC /* UbuduIndoorLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA6F91B0E3BA60088A6DC /* UbuduIndoorLocation.framework */; };
 		A46AA7311B0E3C390088A6DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7301B0E3C390088A6DC /* Foundation.framework */; };
 		A46AA7331B0E3C3F0088A6DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7321B0E3C3F0088A6DC /* CoreGraphics.framework */; };
@@ -22,16 +21,6 @@
 		A46AA7391B0E3C530088A6DC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7381B0E3C530088A6DC /* ImageIO.framework */; };
 		A46AA73B1B0E3C5A0088A6DC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA73A1B0E3C5A0088A6DC /* libc++.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A457DE2D1B0E1B4100277EDC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A457DE0B1B0E1B4000277EDC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A457DE121B0E1B4000277EDC;
-			remoteInfo = UbuduIndoorLocation;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A457DE131B0E1B4000277EDC /* Indoor Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Indoor Location.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +33,6 @@
 		A457DE211B0E1B4000277EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A457DE231B0E1B4000277EDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A457DE261B0E1B4000277EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A457DE2C1B0E1B4100277EDC /* UbuduIndoorLocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UbuduIndoorLocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A457DE311B0E1B4100277EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A457DE321B0E1B4100277EDC /* UbuduIndoorLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UbuduIndoorLocationTests.m; sourceTree = "<group>"; };
 		A46AA6F91B0E3BA60088A6DC /* UbuduIndoorLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UbuduIndoorLocation.framework; path = ../UbuduIndoorLocation.framework; sourceTree = "<group>"; };
 		A46AA7301B0E3C390088A6DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A46AA7321B0E3C3F0088A6DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,13 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A457DE291B0E1B4100277EDC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				A457DE151B0E1B4000277EDC /* UbuduIndoorLocation */,
-				A457DE2F1B0E1B4100277EDC /* UbuduIndoorLocationTests */,
 				A457DE141B0E1B4000277EDC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				A457DE131B0E1B4000277EDC /* Indoor Location.app */,
-				A457DE2C1B0E1B4100277EDC /* UbuduIndoorLocationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,23 +97,6 @@
 			children = (
 				A457DE171B0E1B4000277EDC /* Info.plist */,
 				A457DE181B0E1B4000277EDC /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A457DE2F1B0E1B4100277EDC /* UbuduIndoorLocationTests */ = {
-			isa = PBXGroup;
-			children = (
-				A457DE321B0E1B4100277EDC /* UbuduIndoorLocationTests.m */,
-				A457DE301B0E1B4100277EDC /* Supporting Files */,
-			);
-			path = UbuduIndoorLocationTests;
-			sourceTree = "<group>";
-		};
-		A457DE301B0E1B4100277EDC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A457DE311B0E1B4100277EDC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,24 +136,6 @@
 			productReference = A457DE131B0E1B4000277EDC /* Indoor Location.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A457DE2B1B0E1B4100277EDC /* UbuduIndoorLocationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A457DE391B0E1B4100277EDC /* Build configuration list for PBXNativeTarget "UbuduIndoorLocationTests" */;
-			buildPhases = (
-				A457DE281B0E1B4100277EDC /* Sources */,
-				A457DE291B0E1B4100277EDC /* Frameworks */,
-				A457DE2A1B0E1B4100277EDC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A457DE2E1B0E1B4100277EDC /* PBXTargetDependency */,
-			);
-			name = UbuduIndoorLocationTests;
-			productName = UbuduIndoorLocationTests;
-			productReference = A457DE2C1B0E1B4100277EDC /* UbuduIndoorLocationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +147,6 @@
 				TargetAttributes = {
 					A457DE121B0E1B4000277EDC = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					A457DE2B1B0E1B4100277EDC = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = A457DE121B0E1B4000277EDC;
 					};
 				};
 			};
@@ -226,7 +164,6 @@
 			projectRoot = "";
 			targets = (
 				A457DE121B0E1B4000277EDC /* UbuduIndoorLocation */,
-				A457DE2B1B0E1B4100277EDC /* UbuduIndoorLocationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +176,6 @@
 				A457DE221B0E1B4000277EDC /* Main.storyboard in Resources */,
 				A457DE271B0E1B4000277EDC /* LaunchScreen.xib in Resources */,
 				A457DE241B0E1B4000277EDC /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A457DE2A1B0E1B4100277EDC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,23 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A457DE281B0E1B4100277EDC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A457DE331B0E1B4100277EDC /* UbuduIndoorLocationTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A457DE2E1B0E1B4100277EDC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A457DE121B0E1B4000277EDC /* UbuduIndoorLocation */;
-			targetProxy = A457DE2D1B0E1B4100277EDC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A457DE201B0E1B4000277EDC /* Main.storyboard */ = {
@@ -416,40 +330,6 @@
 			};
 			name = Release;
 		};
-		A457DE3A1B0E1B4100277EDC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UbuduIndoorLocationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UbuduIndoorLocation.app/UbuduIndoorLocation";
-			};
-			name = Debug;
-		};
-		A457DE3B1B0E1B4100277EDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UbuduIndoorLocationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UbuduIndoorLocation.app/UbuduIndoorLocation";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,15 +347,6 @@
 			buildConfigurations = (
 				A457DE371B0E1B4100277EDC /* Debug */,
 				A457DE381B0E1B4100277EDC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A457DE391B0E1B4100277EDC /* Build configuration list for PBXNativeTarget "UbuduIndoorLocationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A457DE3A1B0E1B4100277EDC /* Debug */,
-				A457DE3B1B0E1B4100277EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
