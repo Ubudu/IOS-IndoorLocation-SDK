@@ -13,13 +13,13 @@
 		A457DE221B0E1B4000277EDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A457DE201B0E1B4000277EDC /* Main.storyboard */; };
 		A457DE241B0E1B4000277EDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A457DE231B0E1B4000277EDC /* Images.xcassets */; };
 		A457DE271B0E1B4000277EDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A457DE251B0E1B4000277EDC /* LaunchScreen.xib */; };
-		A46AA6FA1B0E3BA60088A6DC /* UbuduIndoorLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA6F91B0E3BA60088A6DC /* UbuduIndoorLocation.framework */; };
 		A46AA7311B0E3C390088A6DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7301B0E3C390088A6DC /* Foundation.framework */; };
 		A46AA7331B0E3C3F0088A6DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7321B0E3C3F0088A6DC /* CoreGraphics.framework */; };
 		A46AA7351B0E3C460088A6DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7341B0E3C460088A6DC /* UIKit.framework */; };
 		A46AA7371B0E3C4C0088A6DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7361B0E3C4C0088A6DC /* CoreLocation.framework */; };
 		A46AA7391B0E3C530088A6DC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA7381B0E3C530088A6DC /* ImageIO.framework */; };
 		A46AA73B1B0E3C5A0088A6DC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AA73A1B0E3C5A0088A6DC /* libc++.dylib */; };
+		C2E968D71B14623800EE4B78 /* UbuduIndoorLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E968D51B14622C00EE4B78 /* UbuduIndoorLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +33,13 @@
 		A457DE211B0E1B4000277EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A457DE231B0E1B4000277EDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A457DE261B0E1B4000277EDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A46AA6F91B0E3BA60088A6DC /* UbuduIndoorLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UbuduIndoorLocation.framework; path = ../UbuduIndoorLocation.framework; sourceTree = "<group>"; };
 		A46AA7301B0E3C390088A6DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A46AA7321B0E3C3F0088A6DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A46AA7341B0E3C460088A6DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A46AA7361B0E3C4C0088A6DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A46AA7381B0E3C530088A6DC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A46AA73A1B0E3C5A0088A6DC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C2E968D51B14622C00EE4B78 /* UbuduIndoorLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UbuduIndoorLocation.framework; path = ../UbuduIndoorLocation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +47,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E968D71B14623800EE4B78 /* UbuduIndoorLocation.framework in Frameworks */,
 				A46AA73B1B0E3C5A0088A6DC /* libc++.dylib in Frameworks */,
 				A46AA7391B0E3C530088A6DC /* ImageIO.framework in Frameworks */,
 				A46AA7371B0E3C4C0088A6DC /* CoreLocation.framework in Frameworks */,
 				A46AA7351B0E3C460088A6DC /* UIKit.framework in Frameworks */,
 				A46AA7331B0E3C3F0088A6DC /* CoreGraphics.framework in Frameworks */,
 				A46AA7311B0E3C390088A6DC /* Foundation.framework in Frameworks */,
-				A46AA6FA1B0E3BA60088A6DC /* UbuduIndoorLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 		A46AA73C1B0E3CDA0088A6DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A46AA6F91B0E3BA60088A6DC /* UbuduIndoorLocation.framework */,
+				C2E968D51B14622C00EE4B78 /* UbuduIndoorLocation.framework */,
 				A46AA7361B0E3C4C0088A6DC /* CoreLocation.framework */,
 				A46AA7381B0E3C530088A6DC /* ImageIO.framework */,
 				A46AA7341B0E3C460088A6DC /* UIKit.framework */,
@@ -304,6 +304,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ubudu/Documents/dev/public/IOS-IndoorLocation-SDK",
+					"/Users/jeanfelix/Documents/Production/iOS/IOS-IndoorLocation-SDK",
 				);
 				INFOPLIST_FILE = UbuduIndoorLocation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -322,6 +323,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ubudu/Documents/dev/public/IOS-IndoorLocation-SDK",
+					"/Users/jeanfelix/Documents/Production/iOS/IOS-IndoorLocation-SDK",
 				);
 				INFOPLIST_FILE = UbuduIndoorLocation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
