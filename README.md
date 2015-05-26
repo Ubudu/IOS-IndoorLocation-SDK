@@ -72,8 +72,8 @@ The Indoor Location SDK can work with both mode as it based on iBeacon ranging, 
 
 You also need to call the corresponding CoreLocation method **before** starting the Ubudu Indoor Location manager.
 
-* **When In Use** mode: `[CLManager requestWhenInUseAuthorization];`
-* **Always** mode: `[CLManager requestAlwaysAuthorization];`
+* **When In Use** mode: `[[[CLLocationManager alloc] init] requestWhenInUseAuthorization];`
+* **Always** mode: `[[[CLLocationManager alloc] init] requestAlwaysAuthorization];`
 
 See [Apple CoreLocation documentation](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html#//apple_ref/doc/uid/TP40007125-CH3-SW62) for more details.
 
@@ -88,9 +88,9 @@ First of all you need a configured map. To create and configure a map go on the 
 Then once the map properties are configured, the manager provide you the unique key of the map.
 
 - Import the header in your view controller `#import <UbuduIndoorLocation/UbuduIndoorLocation.h>`
-- Instanciate an `UbuduIndoorLocationManager` object.
+- Instanciate an `UBUIndoorLocationManager` object.
 - Load your map using the method `loadMapWithKey:success:failure:`
-- Implement the protocol `UbuduIndoorLocationManagerDelegate` in your view controller.
+- Implement the protocol `UBUIndoorLocationManagerDelegate` in your view controller.
 - Finally call `start` on your indoor position manager to start receiving position updates. 
 
 A `stop` method exists as well, don't forget to call it when you don't need the position inside the venue anymore.
@@ -115,7 +115,7 @@ Here is an example on how to initialize and start the SDK:
         NSLog(@"Map loading success");
         [self.locationManager start]; // start only on success callback
         
-    } failure:^(NSError *error)
+    } failure:^(NSError *error) {
         NSLog(@"Map loading failure: %@", error);
     }];
 }
@@ -125,7 +125,7 @@ Here is an example on how to initialize and start the SDK:
 
 ## IV. Location Manager delegate
 
-The `UbuduIndoorLocationManagerDelegate` provides callback methods which you can implement to receive events from the indoor location manager.
+The `UBUIndoorLocationManagerDelegate` provides callback methods which you can implement to receive events from the indoor location manager.
 
 Implement any of the methods below to receive events that are of any interest for your application:
 
@@ -150,7 +150,7 @@ On your **header** file you can declare `@class UBUMapViewController;`
 
 And a **property** : `@property(strong, nonatomic) UBUMapViewController * mapViewController;`
 
-Based on the previous code snippet _(cf : III Get Start With the SDK)_, here is an example of how to display the map view controller.
+Based on the previous code snippet _(cf : III Setup the Indoor Location SDK)_, here is an example of how to display the map view controller.
 
 ```
 - (void)viewDidLoad
@@ -158,12 +158,14 @@ Based on the previous code snippet _(cf : III Get Start With the SDK)_, here is 
     [super viewDidLoad];
     [self initIndoorLocationManager];
 }
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     // Subscribe as delegate everytime we appear because mapViewController sets itself as location manager delegate when presented
     self.locationManager.delegate = self;
 }
+
 - (void)initIndoorLocationManager
 {
 	NSString *mapKey = @"1eff16a0d6c80132a0ef0a824b34cee9";
@@ -179,6 +181,7 @@ Based on the previous code snippet _(cf : III Get Start With the SDK)_, here is 
         NSLog(@"Map loading failure: %@", error);
     }];
 }
+
 - (void)showMap
 {
     self.mapViewController = [[UBUMapViewController alloc] init];
