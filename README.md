@@ -174,7 +174,7 @@ Based on the previous code snippet _(cf : III Get Start With the SDK)_, here is 
         [self.locationManager start];
         
         // Push the map view conroller once the map is loaded
-		[self showMap]
+		[self showMap];
     } failure:^(NSError *error) {
         NSLog(@"Map loading failure: %@", error);
     }];
@@ -184,6 +184,5 @@ Based on the previous code snippet _(cf : III Get Start With the SDK)_, here is 
     self.mapViewController = [[UBUMapViewController alloc] init];
     self.mapViewController.locationManager = self.locationManager;
     [self presentViewController:self.mapViewController animated:YES completion:NULL];
-} 
-
+}
 ```

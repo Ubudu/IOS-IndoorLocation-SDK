@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UbuduIndoorLocation"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Indoor Location SDK allows real time indoor positioning and navigation with beacons."
   s.homepage     = "http://www.ubudu.com"
   s.license      = { :type => "BSD", :file => "LICENSE" }
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.social_media_url = "https://twitter.com/Ubudu"
 
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/Ubudu/IOS-IndoorLocation-SDK.git", :tag => "v0.1.1" }
+  s.source       = { :git => "https://github.com/Ubudu/IOS-IndoorLocation-SDK.git", :tag => "v0.1.2" }
   s.vendored_frameworks = "UbuduIndoorLocation.framework"
   s.frameworks = "Foundation", "CoreGraphics", "UIKit", "CoreLocation"
   s.libraries = "c++"
