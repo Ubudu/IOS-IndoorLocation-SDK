@@ -80,7 +80,7 @@ See [Apple CoreLocation documentation](https://developer.apple.com/library/ios/d
 
 ## III. Setup the Indoor Location SDK
 
-First of all you need a configured map. To create and configure a map go on the [manager plateform](https://manager.ubudu.com/) 
+First of all you need a configured map. To create and configure a map go on the [ubudu Manager](https://manager.ubudu.com/) 
 
 - Select a venue into **Venues & indoor maps**.
 - Click on the **Maps** button and click **Add**.
