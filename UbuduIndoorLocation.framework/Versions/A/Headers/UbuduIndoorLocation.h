@@ -29,10 +29,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import <UbuduIndoorLocation/UBUBeacon.h>
 #import <UbuduIndoorLocation/UBUZone.h>
 #import <UbuduIndoorLocation/UBUMap.h>
+#import <UbuduIndoorLocation/UBUPoi.h>
 #import <UbuduIndoorLocation/UBUIndoorLocationManagerDelegate.h>
 #import <UbuduIndoorLocation/UBUIndoorLocationManager.h>
 #import <UbuduIndoorLocation/UBUBeaconUpdate.h>
