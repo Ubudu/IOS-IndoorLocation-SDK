@@ -42,8 +42,7 @@ If you don't want or cannot use CocoaPods you can install the SDK manually by fo
 	- Foundation
 	- CoreGraphics
 	- UIKit
-	- CoreLocation
-	- ImageIO
+	- CoreLocation	
 	- libc++.dylib
 	
 	Your framework folder should look like this: 
