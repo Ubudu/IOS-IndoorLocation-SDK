@@ -63,6 +63,21 @@
 @property (nonatomic, strong, readonly) UBUZone *closestZone;
 
 /**
+ * Current zones from the current navigable position.
+ */
+@property (nonatomic, strong, readonly) NSArray *currentZones;
+
+
+/**
+ *  Initializes a newly created position update object with only the estimated position.
+ *
+ *  @param estimatedPosition The estimated position.
+ *
+ *  @return A position update initialized with the given estimated position. Other fiedls are nil or CGPointMake(0,0);
+ */
+- (instancetype)initWithEstimatedPosition:(CGPoint)estimatedPosition;
+
+/**
  *  Initializes a newly created position update object.
  *
  *  @param estimatedPosition     The estimated position.
@@ -80,13 +95,23 @@
                               closestZone:(UBUZone *)closestZone;
 
 /**
- *  Initializes a newly created position update object with only the estimated position.
+ *  Initializes a newly created position update object.
  *
- *  @param estimatedPosition The estimated position.
+ *  @param estimatedPosition     The estimated position.
+ *  @param smoothedPosition      The estimated position smoothed over time.
+ *  @param closestNavigablePoint The closest navigable point from the estimated position.
+ *  @param closestBeacon         The closest beacon from the estimated position.
+ *  @param closestZone           The closest zone from the estimated position.
+ *  @param currentZones          Current zones which position belongs to.
  *
- *  @return A position update initialized with the given estimated position. Other fiedls are nil or CGPointMake(0,0);
+ *  @return A position update initialized with given estimated position and related info.
  */
-- (instancetype)initWithEstimatedPosition:(CGPoint)estimatedPosition;
+- (instancetype)initWithEstimatedPosition:(CGPoint)estimatedPosition
+                         smoothedPosition:(CGPoint)smoothedPosition
+                    closestNavigablePoint:(CGPoint)closestNavigablePoint
+                            closestBeacon:(UBUBeacon *)closestBeacon
+                              closestZone:(UBUZone *)closestZone
+                             currentZones:(NSArray *)currentZones;
 
 /**
  *  Serializes the position update to `NSDictionary`.

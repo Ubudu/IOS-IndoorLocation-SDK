@@ -84,4 +84,10 @@
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager closestZoneDidChange:(UBUPositionUpdate *)positionUpdate;
 
+/**
+ * Invoked when current zones from the estimated position changes.
+ * @param positionUpdate  The position update object containing current zones and other related info.
+ */
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeZones:(UBUPositionUpdate *)positionUpdate;
+
 @end

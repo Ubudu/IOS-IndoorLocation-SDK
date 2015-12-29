@@ -28,6 +28,7 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import <UbuduIndoorLocation/UBUBeacon.h>
 #import <UbuduIndoorLocation/UBUZone.h>
@@ -54,13 +55,24 @@
 @property (nonatomic, strong, readonly) NSArray *zones;
 
 /**
+ *  Points of interest
+ */
+@property (nonatomic, strong, readonly) NSArray *pois;
+
+
+/**
  *  Initializes a newly created map object.
  *
- *  @param size Size of the map.
+ *  @param Size of the map.
  *
- *  @return <#return value description#>
+ *  @return Value description
  */
 - (instancetype)initWithSize:(CGSize)size;
+
+/**
+ * The url to the map image file
+ */
+@property (nonatomic, strong) NSString *imageUrl;
 
 /**
  *  Retrieve a zone by its identifier.
@@ -79,5 +91,17 @@
  *  @return The `UBUZone` containing the given tag.
  */
 - (NSArray *)getZonesByTag:(NSString *)tag;
+
+/**
+ *
+ * @return geographical coordinates of the top left anchor of the map.
+ */
+- (CLLocationCoordinate2D)topLeftAnchorCoordinates;
+
+/**
+ *
+ * @return geographical coordinates of the bottom right anchor of the map.
+ */
+- (CLLocationCoordinate2D)bottomRightAnchorCoordinates;
 
 @end

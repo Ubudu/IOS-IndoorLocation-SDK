@@ -53,4 +53,41 @@
  */
 @property (nonatomic, strong) UBUIndoorLocationManager *locationManager;
 
+
+/*
+ *
+ */
+- (instancetype)init;
+
+/**
+ * 
+ */
+- (void)setPathFindingDisplay:(BOOL)status;
+
+/**
+ * Allow to enable or disable zones overlay display on Map
+ * status : YES to display zone overlay , NO to disable zone overlay display
+ */
+- (void)setZoneDisplay:(BOOL)status;
+
+/**
+ * Allow to enable or disable the event to highlight the closest zones overlay on Map
+ * status : YES to enable event highlight , NO to disable event highlight
+ */
+- (void)setHighLightClosestZone:(BOOL)status;
+
+/**
+ * Provide properties to Draw a Zone on Map
+ *
+ * # zoneToHighlight : an array of UBUZone object to highlight at start, can be nil in that case no zone highlight
+ * # defaultColor : custom zone overlay background color. A value for colorWithAlphaComponent of 0.2 is applied. Default color is lightgray for nil parameter.
+ * # highlightColor : custom zone overlay highlight background color. A value for colorWithAlphaComponent of 0.2 is applied. Default color is red for nil parameter.
+ * # borderColor : custom zone overlay border color. Default color is black for nil parameter.
+ */
+- (void)setupZoneWith:(NSArray *)zoneToHighlight
+         defaultColor:(UIColor *)defaultColor
+       highLightColor:(UIColor *)highlightColor
+          borderColor:(UIColor *)borderColor;
+
+
 @end

@@ -65,6 +65,16 @@
 @property (nonatomic, strong, readonly) UBUPositionUpdate *lastPosition;
 
 /**
+ *  The flag indicates if Indoor Location Manager is using motion filtering to improve stability of positioning
+ */
+@property (nonatomic, getter=isUsingMotionMonitorFiltering) BOOL motionFiltering;
+
+/**
+ *  Version of the SDK.
+ */
+@property (nonatomic, readonly) NSString *version;
+
+/**
  *  Load a map from the Ubudu manager platform.
  *
  *  @param mapKey       They unique identifier of your map, as indicated on the manager platform.
@@ -102,5 +112,12 @@
  *  Stop computing the device position.
  */
 - (void)stop;
+
+/**
+ * @param point a point on the map.
+ * @return geographical coordinates (latitude, longitude) for the given point.
+ */
+- (CLLocationCoordinate2D)geoCoordinateForPoint:(CGPoint)point;
+
 
 @end

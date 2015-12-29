@@ -28,6 +28,8 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <UbuduIndoorLocation/UBUPolygon.h>
+#import <UIKit/UIKit.h>
 
 /**
  *  Representation of a rectangular zone on the map. Immutable object.
@@ -50,15 +52,8 @@
  */
 @property (nonatomic, copy, readonly) NSArray *tags;
 
-/**
- *  Size of the zone.
- */
-@property (nonatomic, readonly) CGSize size;
 
-/**
- *  Origin of the zone on the map.
- */
-@property (nonatomic, readonly) CGPoint origin;
+@property (nonatomic, copy, readonly) UIColor *color;
 
 /**
  *  Initializes a newly created zone object.
@@ -74,8 +69,14 @@
 - (instancetype)initWithZoneID:(NSNumber *)zoneID
                           name:(NSString *)name
                           tags:(NSArray *)tags
-                        origin:(CGPoint)origin
-                          size:(CGSize)size;
+                         shape:(NSDictionary *)shape;
+
+
+- (instancetype)initWithZoneID:(NSNumber *)zoneID
+                          name:(NSString *)name
+                          tags:(NSArray *)tags
+                         shape:(NSDictionary *)shape
+                         color:(UIColor *)color;
 
 /**
  *  Computes the minimum distance between given point and the zone side closest to this point.
@@ -85,5 +86,11 @@
  *  @return Minimum distance between zone and given point.
  */
 - (CGFloat)distanceToPoint:(CGPoint)point;
+
+
+/**
+ * Return a UBUPolygon object for this zone
+ */
+- (UBUPolygon *)polygon;
 
 @end

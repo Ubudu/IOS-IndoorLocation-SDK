@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 0.1.1 Release Notes
+Ubudu SDK Version 0.9.0 Release Notes
 -------------------------------------
 
 Platform Support
@@ -12,14 +12,18 @@ Platform Support
 Features Added
 --------------
 
-None
-
+- Indoor Location Georeference functionality
+- Support POI from map
+- Motion filtering to improve accuracy ond stability of location
+- Added polygons for zones
 
 Improvements Done
 -----------------
 
- * Added documentation.
-
+- Image url for map to allow using overlays (on Google maps, Apple maps etc.)
+- Color property for UBUZone
+- CurrentZones property for PositionUpdate
+- Stability Improvements
 
 Issues Addressed
 ----------------
@@ -42,6 +46,16 @@ The API of the SDK may change without notice until the SDK reaches version 1.0.
 
 Change history
 --------------
+Version 0.9.0
+
+	- Indoor Location Georeference functionality
+	- Support POI from map
+	- Motion filtering to improve accuracy ond stability of location
+	- Added polygons for zones
+	- Image url for map to allow using overlays (on Google maps, Apple maps etc.)
+	- Color property for UBUZone
+	- CurrentZones property for PositionUpdate
+	- Stability improvements
 
 Version 0.1.1
 	- Documented the SDK.
