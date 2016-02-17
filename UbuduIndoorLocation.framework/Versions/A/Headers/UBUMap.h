@@ -59,15 +59,22 @@
  */
 @property (nonatomic, strong, readonly) NSArray *pois;
 
+@property (nonatomic, strong) NSString *uuid;
+
+/**
+ *  Level of the map
+ */
+@property (nonatomic) NSInteger level;
 
 /**
  *  Initializes a newly created map object.
  *
  *  @param Size of the map.
+ *  @param proximity UUID of beacons in the map
  *
  *  @return Value description
  */
-- (instancetype)initWithSize:(CGSize)size;
+- (instancetype)initWithSize:(CGSize)size andProximityUUID:(NSString *)proximityUUID;
 
 /**
  * The url to the map image file

@@ -67,6 +67,10 @@
  */
 @property (nonatomic, strong, readonly) NSArray *currentZones;
 
+/**
+ * Level of the current map.
+ */
+@property (nonatomic, readonly) NSInteger level;
 
 /**
  *  Initializes a newly created position update object with only the estimated position.

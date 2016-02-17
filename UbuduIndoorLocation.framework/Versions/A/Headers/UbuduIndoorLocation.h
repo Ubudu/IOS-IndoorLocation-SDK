@@ -37,10 +37,7 @@
 #import <UbuduIndoorLocation/UBUPoi.h>
 #import <UbuduIndoorLocation/UBUIndoorLocationManagerDelegate.h>
 #import <UbuduIndoorLocation/UBUIndoorLocationManager.h>
-#import <UbuduIndoorLocation/UBUBeaconUpdate.h>
 #import <UbuduIndoorLocation/UBUPositionUpdate.h>
 
 #import <UbuduIndoorLocation/UBUVertex.h>
 #import <UbuduIndoorLocation/UBUPolygon.h>
-#import <UbuduIndoorLocation/UBUDrawableZone.h>
-#import <UbuduIndoorLocation/UBUMapViewController.h>

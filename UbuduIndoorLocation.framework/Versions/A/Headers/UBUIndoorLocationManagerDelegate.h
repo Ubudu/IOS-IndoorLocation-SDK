@@ -31,7 +31,6 @@
 
 #import <UbuduIndoorLocation/UBUBeacon.h>
 #import <UbuduIndoorLocation/UBUZone.h>
-#import <UbuduIndoorLocation/UBUBeaconUpdate.h>
 #import <UbuduIndoorLocation/UBUPositionUpdate.h>
 
 @class UBUIndoorLocationManager;
@@ -48,7 +47,7 @@
  *  Invoked when the location manager receive an update from beacons nearby the device.
  *
  *  @param locationManager The location manager that generated the event.
- *  @param beaconsUpdates  NSArray of `UBUBeaconUpdate` representing the beacons visible around the device and involved in the map configuration.
+ *  @param beaconsUpdates  NSArray of `UBUBeacon` representing the beacons visible around the device and involved in the map configuration.
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateBeacons:(NSArray *)beaconsUpdates;
 
@@ -58,7 +57,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the estimated position and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager positionDidChange:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangePosition:(UBUPositionUpdate *)positionUpdate;
 
 /**
  *  Invoked when the closest navigable point from the estimated position changes.
@@ -66,7 +65,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest navigable point and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager closestNavigablePointDidChange:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestNavigablePoint:(UBUPositionUpdate *)positionUpdate;
 
 /**
  *  Invoked when the closest beacon from the estimated position changes.
@@ -74,7 +73,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest beacon and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager closestBeaconDidChange:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestBeacon:(UBUPositionUpdate *)positionUpdate;
 
 /**
  *  Invoked when the closest zone from the estimated position changes.
@@ -82,12 +81,18 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest zone and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager closestZoneDidChange:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestZone:(UBUPositionUpdate *)positionUpdate;
 
 /**
  * Invoked when current zones from the estimated position changes.
  * @param positionUpdate  The position update object containing current zones and other related info.
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeZones:(UBUPositionUpdate *)positionUpdate;
+
+/**
+ * Invoked when heading changes.
+ * @param newHeading    Object containing new heading.
+ */
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateHeading:(CLHeading *)newHeading;
 
 @end

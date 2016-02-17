@@ -40,6 +40,13 @@
 @interface UBUIndoorLocationManager : NSObject
 
 /**
+ *  The Ubudu IL namespace of the application.
+ *
+ *  Need to be set to the value provided by the Ubudu manager platform in order to retrieve the venues you defined for your application.
+ */
+@property (nonatomic, strong, readonly) NSString *appNamespace;
+
+/**
  *  The delegate object that receives events from the location manager, like position update events.
  */
 @property (nonatomic, weak) id<UBUIndoorLocationManagerDelegate> delegate;
@@ -57,7 +64,7 @@
 /**
  *  The current map used in which to compute device position.
  */
-@property (nonatomic, strong, readonly) UBUMap *currentMap;
+@property (nonatomic, strong, readwrite) UBUMap *currentMap;
 
 /**
  *  Last known position.
@@ -70,19 +77,54 @@
 @property (nonatomic, getter=isUsingMotionMonitorFiltering) BOOL motionFiltering;
 
 /**
+ *  The accuracy treshold. Ranged beacons with accuracy higher than this treshold will not be used to estimate the position.
+ *  By default, the accuracy treshold is set to 15.0.
+ *
+ *  DO NOT CHANGE THIS VALUE UNTIL YOU ARE SURE WHAT YOU ARE DOING.
+ *  CHANGING THIS VALUE MAY REDUCE THE ACCURACY OF THE ESTIMATED POSITION.
+ */
+@property (nonatomic) double accuracyTreshold;
+
+/**
  *  Version of the SDK.
  */
 @property (nonatomic, readonly) NSString *version;
 
 /**
+ *  Singleton of indoor location manager
+ */
++ (instancetype)sharedInstance;
+
+/**
+ *  Load application for namespace, fetch all needed data (maps, images) if needed, Otherwise load locally
+ */
+- (void)loadApplicationForNamespace:(NSString *)appNamespace
+                            success:(void(^)())successBlock
+                            failure:(void(^)(NSError *error))failureBlock;
+
+- (void)loadApplicationForNamespace:(NSString *)appNamespace
+                     downloadImages:(BOOL)shouldDownloadImagesForMaps
+                            success:(void(^)())successBlock
+                            failure:(void(^)(NSError *error))failureBlock;
+/**
+ *  Start computing the device position.
+ */
+- (BOOL)start:(NSError **)error;
+
+/**
+ *  Stop computing the device position.
+ */
+- (void)stop;
+
+/**
  *  Load a map from the Ubudu manager platform.
  *
  *  @param mapKey       They unique identifier of your map, as indicated on the manager platform.
- *  @param successBlock A block invoked when the map is successfully loaded.
+ *  @param successBlock A block invoked when the map is successfully loaded. It returns a map assigned to currentMap
  *  @param failureBlock A block invoked if the map can't be loaded.
  */
 - (void)loadMapWithKey:(NSString *)mapKey
-               success:(void(^)())successBlock
+               success:(void(^)(UBUMap* map))successBlock
                failure:(void(^)(NSError* error))failureBlock;
 
 /**
@@ -92,7 +134,7 @@
  *
  *  @return YES if the map was successfully loaded, NO otherwise.
  */
-- (BOOL)loadMapFromFile:(NSString *)configFilePath;
+- (UBUMap *)loadMapFromFile:(NSString *)configFilePath;
 
 /**
  *  Load a map from a JSON configuration already loaded in memory.
@@ -101,17 +143,7 @@
  *
  *  @return YES if the map was successfully loaded, NO otherwise.
  */
-- (BOOL)loadMapFromJSON:(NSDictionary *)jsonConfig;
-
-/**
- *  Start computing the device position.
- */
-- (void)start;
-
-/**
- *  Stop computing the device position.
- */
-- (void)stop;
+- (UBUMap *)loadMapFromJSON:(NSDictionary *)config;
 
 /**
  * @param point a point on the map.
@@ -119,5 +151,8 @@
  */
 - (CLLocationCoordinate2D)geoCoordinateForPoint:(CGPoint)point;
 
+- (UIImage *)mapOverlayForCurrentMap;
+
+- (NSArray *)loadAllStoredMaps;
 
 @end

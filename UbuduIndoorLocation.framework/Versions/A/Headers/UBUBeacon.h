@@ -28,6 +28,7 @@
 //
 
 #import <CoreGraphics/CoreGraphics.h>
+#import <CoreLocation/CoreLocation.h>
 
 /**
  *  Represents a beacon placed on a map. Immutable object.
@@ -50,16 +51,45 @@
 @property (nonatomic, readonly) CGPoint position;
 
 /**
+ *  Accuracy of the beacon update. This value is computed by CoreLocation.
+ */
+@property (nonatomic, readonly) CLLocationAccuracy accuracy;
+
+/**
+ *  The strenght of the signal receive from the beacon. This value is computed by CoreLocation.
+ */
+@property (nonatomic, readonly) NSInteger rssi;
+
+/**
  *  Initializes a newly created beacon object.
  *
  *  @param major    Beacon major.
  *  @param minor    Beacon minor.
  *  @param position Beacon position.
  *
- *  @return A map initialized with its size.
+ *  @return A beacon initialized with its major minor and position.
  */
 - (instancetype)initWithMajor:(NSNumber *)major
                         minor:(NSNumber *)minor
                      position:(CGPoint)position;
+
+/**
+ *  Initializes a newly created beacon object with data from CLBeacon (RSSI, accuracy)
+ *
+ *  @param major    Beacon major.
+ *  @param minor    Beacon minor.
+ *  @param position Beacon position.
+ *  @param CLBeacon CLBeacon
+ *  @param proximityUUID proximity UUID of the beacon 
+ *
+ *  @return A map initialized with its major, minor, position, proximity UUID and CLBeacon.
+ */
+
+- (instancetype)initWithMajor:(NSNumber *)major
+                        minor:(NSNumber *)minor
+                     position:(CGPoint)position
+                     CLBeacon:(CLBeacon *)clBeacon
+                proximityUUID:(NSUUID *)proximityUUID;
+
 
 @end
