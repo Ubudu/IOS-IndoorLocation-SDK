@@ -32,6 +32,8 @@
 #import <UbuduIndoorLocation/UBUBeacon.h>
 #import <UbuduIndoorLocation/UBUZone.h>
 #import <UbuduIndoorLocation/UBUPositionUpdate.h>
+#import <UbuduIndoorLocation/UBUMotion.h>
+#import <CoreMotion/CoreMotion.h>
 
 @class UBUIndoorLocationManager;
 
@@ -94,5 +96,10 @@
  * @param newHeading    Object containing new heading.
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateHeading:(CLHeading *)newHeading;
+
+/**
+ * Invoked when indoor location failed with error.
+ */
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didFailWithError:(nonnull NSError *)error;
 
 @end

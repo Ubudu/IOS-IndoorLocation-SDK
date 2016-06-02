@@ -32,6 +32,13 @@
 #import <UbuduIndoorLocation/UBUBeacon.h>
 #import <UbuduIndoorLocation/UBUZone.h>
 
+typedef enum {
+    kBLE,
+    kPDR,
+    kGPS,
+    kUnknown
+} PositionSource;
+
 /**
  *  Contains the estimated position in the map at a given moment.
  */
@@ -43,14 +50,29 @@
 @property (nonatomic, readonly) CGPoint estimatedPosition;
 
 /**
+ *  The geocoordinate for the raw estimated position of the device on the georeferenced map.
+ */
+@property (nonatomic, readonly) CLLocationCoordinate2D estimatedCoordinate;
+
+/**
  * Position smoothed over time.
  */
 @property (nonatomic, readonly) CGPoint smoothedPosition;
 
 /**
+ *  The geocoordinate smoothed over time.
+ */
+@property (nonatomic, readonly) CLLocationCoordinate2D smoothedCoordinate;
+
+/**
  * The closest navigable point from the current position.
  */
 @property (nonatomic, readonly) CGPoint closestNavigablePoint;
+
+/**
+ *  The geocoordinate for the closest navigable point from the current position
+ */
+@property (nonatomic, readonly) CLLocationCoordinate2D closestNavigablePointCoordinate;
 
 /**
  * The closest beacon from the current navigable position.
@@ -71,6 +93,28 @@
  * Level of the current map.
  */
 @property (nonatomic, readonly) NSInteger level;
+
+/**
+ *  External level id. You may use it to link the level form ubudu BO with external map provider.
+ */
+@property (nonatomic) NSString *extLevel;
+
+/**
+ *  Date of the position update.
+ */
+@property (nonatomic, readonly) NSDate *date;
+
+@property (nonatomic, readwrite) PositionSource positionSource;
+
+/**
+ * Initializes a newly created position update object with only estimated coordinate position.
+ *
+ *  @param estimatedCoordinate The estimated coordinate.
+ *
+ *  @return A position update initialized with the given estimated coordinate. Other fiedls are nil or CGPointMake(0,0);
+ *
+ */
+- (instancetype)initWithEstimatedCoordinate:(CLLocationCoordinate2D)estimatedCoordinate;
 
 /**
  *  Initializes a newly created position update object with only the estimated position.

@@ -67,6 +67,11 @@
 @property (nonatomic) NSInteger level;
 
 /**
+ *  External level id. You may use it to link the level form ubudu BO with external map provider.
+ */
+@property (nonatomic) NSString *extLevel;
+
+/**
  *  Initializes a newly created map object.
  *
  *  @param Size of the map.
@@ -80,6 +85,12 @@
  * The url to the map image file
  */
 @property (nonatomic, strong) NSString *imageUrl;
+
+
+/**
+ * The url of the map tiles
+ */
+@property(nonatomic, strong) NSString *tilesUrl;
 
 /**
  *  Retrieve a zone by its identifier.

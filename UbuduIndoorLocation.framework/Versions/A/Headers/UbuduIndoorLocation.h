@@ -41,3 +41,5 @@
 
 #import <UbuduIndoorLocation/UBUVertex.h>
 #import <UbuduIndoorLocation/UBUPolygon.h>
+
+#import <UbuduIndoorLocation/UBUMotion.h>

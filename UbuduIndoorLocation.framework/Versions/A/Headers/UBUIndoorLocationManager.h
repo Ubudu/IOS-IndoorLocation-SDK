@@ -64,7 +64,12 @@
 /**
  *  The current map used in which to compute device position.
  */
-@property (nonatomic, strong, readwrite) UBUMap *currentMap;
+@property (nonatomic, strong, readonly) UBUMap *currentMap;
+
+/*
+ *  The flag indicates if the manager should use rectified or non-rectified map. It is YES by default.
+ */
+@property (nonatomic) BOOL useRectifiedMaps;
 
 /**
  *  Last known position.
@@ -75,6 +80,21 @@
  *  The flag indicates if Indoor Location Manager is using motion filtering to improve stability of positioning
  */
 @property (nonatomic, getter=isUsingMotionMonitorFiltering) BOOL motionFiltering;
+
+/**
+ *  The flag indicates if indoor location manager shoould updates heading. Default is NO.
+ */
+@property (nonatomic, getter=isUpdateheadingEnabled) BOOL updateHeading;
+
+/**
+ *  The flag indicates when "transition" zones are used to switch between maps.
+ */
+@property (nonatomic, getter=isTransitionZonesModeEnabled) BOOL transitionZonesMode;
+
+/**
+ *  The current heading of the device
+ */
+@property (nonatomic) CLHeading *currentHeading;
 
 /**
  *  The accuracy treshold. Ranged beacons with accuracy higher than this treshold will not be used to estimate the position.
@@ -96,16 +116,42 @@
 + (instancetype)sharedInstance;
 
 /**
- *  Load application for namespace, fetch all needed data (maps, images) if needed, Otherwise load locally
+ * This method allows you to preload ubudu map data for your namespace.
+ * @discussion To prepare a data for preloading - launch your app and fetch latest map data.
+ * Plug your iOS device to your mac and in xcode open devices window and download a container for your app.
+ * From documents/ubudu directory copy the folder named with your namespace to your xcode project and add it to
+ * Copy Bundle Resources in Build Phases. Then call this method before starting IL.
+ *
+ * @param foldername - the name of the folder in the bundle’s subdirectory containing resources. it should be named with the application's namespace
+ * @return return YES if resources with map were preloaded properly and returns NO if there are already some data in the folder.
+ */
++ (BOOL)preloadMapDataFromSourceFolder:(NSString *)folderName;
+
+/**
+ *  The Ubudu namespace of the application. Must be set before starting the SDK.
+ *  This method fetches all needed data (maps, images) if needed. Otherwise load locally.
+ *  @param appNamespace The unique identifier of your application, as indicated on the manager platform.
+ *  @param successBlock A block invoked when the application is successfully loaded.
+ *  @param failureBlock A block invoked if the application can't be loaded.
  */
 - (void)loadApplicationForNamespace:(NSString *)appNamespace
                             success:(void(^)())successBlock
                             failure:(void(^)(NSError *error))failureBlock;
 
+/**
+ *  The Ubudu namespace of the application. Must be set before starting the SDK. 
+ *  This method fetches all needed data (maps, images) if needed. Otherwise load locally.
+ *  @param appNamespace The unique identifier of your application, as indicated on the manager platform.
+ *  @param shouldDownloadImagesForMaps a BOOL indicates if sdk should download images of the maps
+ *  @param successBlock A block invoked when the application is successfully loaded.
+ *  @param failureBlock A block invoked if the application can't be loaded.
+ */
 - (void)loadApplicationForNamespace:(NSString *)appNamespace
                      downloadImages:(BOOL)shouldDownloadImagesForMaps
                             success:(void(^)())successBlock
                             failure:(void(^)(NSError *error))failureBlock;
+
+
 /**
  *  Start computing the device position.
  */
@@ -117,33 +163,10 @@
 - (void)stop;
 
 /**
- *  Load a map from the Ubudu manager platform.
- *
- *  @param mapKey       They unique identifier of your map, as indicated on the manager platform.
- *  @param successBlock A block invoked when the map is successfully loaded. It returns a map assigned to currentMap
- *  @param failureBlock A block invoked if the map can't be loaded.
+ *  Loads a stored map for specific map uuid. This method also set the map as a current map.
+ *  returns a UBUMap or nil if failed.
  */
-- (void)loadMapWithKey:(NSString *)mapKey
-               success:(void(^)(UBUMap* map))successBlock
-               failure:(void(^)(NSError* error))failureBlock;
-
-/**
- *  Load a map from a file containing a JSON representation of the map configuration.
- *
- *  @param configFilePath Path of the file to load.
- *
- *  @return YES if the map was successfully loaded, NO otherwise.
- */
-- (UBUMap *)loadMapFromFile:(NSString *)configFilePath;
-
-/**
- *  Load a map from a JSON configuration already loaded in memory.
- *
- *  @param jsonConfig The map JSON representation.
- *
- *  @return YES if the map was successfully loaded, NO otherwise.
- */
-- (UBUMap *)loadMapFromJSON:(NSDictionary *)config;
+- (UBUMap *)loadMapForUUID:(NSString *)mapUUID;
 
 /**
  * @param point a point on the map.
@@ -151,7 +174,15 @@
  */
 - (CLLocationCoordinate2D)geoCoordinateForPoint:(CGPoint)point;
 
+/**
+ * @param coordinate a geo coordinate of the position.
+ * @return Point in cartesian (XY) coordinates for the given geographical coordinates (latitude, longitude).
+ */
+- (CGPoint)pointForGeoCoordinate:(CLLocationCoordinate2D)coordinate;
+
 - (UIImage *)mapOverlayForCurrentMap;
+
+- (UIImage *)mapOverlayForMap:(UBUMap *)map;
 
 - (NSArray *)loadAllStoredMaps;
 
