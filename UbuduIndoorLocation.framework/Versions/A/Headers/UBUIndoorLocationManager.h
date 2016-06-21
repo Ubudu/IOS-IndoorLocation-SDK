@@ -106,6 +106,11 @@
 @property (nonatomic) double accuracyTreshold;
 
 /**
+ *  The flag indicates if location manager should automatically change the map or not. YES by default.
+ */
+@property (nonatomic) BOOL automaticFloorSwitching;
+
+/**
  *  Version of the SDK.
  */
 @property (nonatomic, readonly) NSString *version;
@@ -168,6 +173,13 @@
  */
 - (UBUMap *)loadMapForUUID:(NSString *)mapUUID;
 
+
+/**
+ *  The method to force to switch the current map.
+ *  @param the map to wich we are going to switch.
+ */
+- (void)forceToSwtichCurrentMap:(UBUMap *)map;
+
 /**
  * @param point a point on the map.
  * @return geographical coordinates (latitude, longitude) for the given point.
@@ -183,6 +195,11 @@
 - (UIImage *)mapOverlayForCurrentMap;
 
 - (UIImage *)mapOverlayForMap:(UBUMap *)map;
+
+/**
+ *  The method return uuids of the stored local maps.
+ */
+- (NSArray *)storedMapUUIDs;
 
 - (NSArray *)loadAllStoredMaps;
 

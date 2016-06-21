@@ -12,7 +12,7 @@ Each addition should contain a short explanation of what added or changed.
 For more information please refer to the API documentation.
 -------------------------------------------------------------------------------
 
-Ubudu Indoor Location SDK API Changes between v1.0.0 and v2.0.
+Ubudu Indoor Location SDK API Changes between v2.0.0 and v2.1.0.
 --------------------------------------------------------------
 
 NEW PROPERTY
@@ -28,21 +28,11 @@ UBUIndoorLocationManager.transitionZonesMode
 	The flag indicates when "transition" zones are used to switch between maps.
 
 NEW PROPERTY
-UBUIndoorLocationManager.currentHeading
-	The current heading of the device
+UBUIndoorLocationManager.automaticFloorSwitching
+	The flag indicates if location manager should automatically change the map or not. YES by default.
 
 NEW METHOD
-[UBUIndoorLocationManager preloadMapDataFromSourceFolder:]
-	Allows to preload the map data into the application
+[UBUIndoorLocationManager forceToSwtichCurrentMap:]
+	The method to force to switch the current map.
 
-NEW METHOD
-[UBUIndoorLocationManager pointForGeoCoordinate:]
-	Point in cartesian (XY) coordinates for the given geographical coordinates (latitude, longitude).
 
-NEW PROPERTY
-UBUMap.extLevel
-	External level id. You may use it to link the level form ubudu BO with external map provider.
-
-NEW PROPERTY
-UBUMap.tilesUrl
-	The base url of the map tiles 
