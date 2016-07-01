@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.1.0 Release Notes
+Ubudu SDK Version 2.1.1 Release Notes
 -------------------------------------
 
 Platform Support
@@ -12,33 +12,29 @@ Platform Support
 Features Added
 --------------
 
-- GPS integration. Ubudu IL SDK provides a position based on bluetooh and sensor fusion, pure inertial positioning or GPS.
-- Option to switch floors manually instead of recognizing floors (maps) automatically by the SDK.
-
+None
 
 Improvements Done
 -----------------
 
-- Improved motion data processing.
-- Reduced lag in positioning. Especially if user is moving fast.
+- SDK is built with bitcode enabled.
 
 Issues Addressed
 ----------------
 
-- Fix preloading ubudu map data.
-- Fix a possible lag / error in accuracy while switching from inertial positioning to ble with sensor fusion.
+- Fix a possible blocking main thread when sdk starts for the very first time.
 
 Known Issues
 ------------
 
-Compatibility
--------------
-
-The API of the SDK may change without notice until the SDK reaches version 1.0.
-
+None
 
 Change history
 --------------
+Version 2.1.1
+	- SDK is built with bitcode enabled.
+	- Fix a possible blocking main thread when sdk starts for the very first time.	
+
 Version 2.1.0
 	- GPS integration. Ubudu IL SDK provides a position based on bluetooh and sensor fusion, pure inertial positioning or GPS.
 	- Option to switch floors manually instead of recognizing floors (maps) automatically by the SDK.

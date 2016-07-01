@@ -12,27 +12,7 @@ Each addition should contain a short explanation of what added or changed.
 For more information please refer to the API documentation.
 -------------------------------------------------------------------------------
 
-Ubudu Indoor Location SDK API Changes between v2.0.0 and v2.1.0.
+Ubudu Indoor Location SDK API Changes between v2.1.0 and v2.1.1.
 --------------------------------------------------------------
 
-NEW PROPERTY
-UBUIndoorLocationManager.useRectifiedMaps
-	The flag indicates if the manager should use rectified or non-rectified map. It is YES by default.
-
-NEW PROPERTY
-UBUIndoorLocationManager.updateHeading
-	The flag indicates if indoor location manager shoould updates heading. Default is NO.
-
-NEW PROPERTY
-UBUIndoorLocationManager.transitionZonesMode
-	The flag indicates when "transition" zones are used to switch between maps.
-
-NEW PROPERTY
-UBUIndoorLocationManager.automaticFloorSwitching
-	The flag indicates if location manager should automatically change the map or not. YES by default.
-
-NEW METHOD
-[UBUIndoorLocationManager forceToSwtichCurrentMap:]
-	The method to force to switch the current map.
-
-
+None
