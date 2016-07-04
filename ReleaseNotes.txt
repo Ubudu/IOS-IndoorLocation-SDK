@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.1.1 Release Notes
+Ubudu SDK Version 2.1.2 Release Notes
 -------------------------------------
 
 Platform Support
@@ -17,12 +17,12 @@ None
 Improvements Done
 -----------------
 
-- SDK is built with bitcode enabled.
+- Fix an issue with BLE / GPS switching
 
 Issues Addressed
 ----------------
 
-- Fix a possible blocking main thread when sdk starts for the very first time.
+None
 
 Known Issues
 ------------
@@ -31,6 +31,9 @@ None
 
 Change history
 --------------
+Version 2.1.2
+	- Fix an issue with BLE / GPS switching
+
 Version 2.1.1
 	- SDK is built with bitcode enabled.
 	- Fix a possible blocking main thread when sdk starts for the very first time.	
