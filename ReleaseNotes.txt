@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.1.2 Release Notes
+Ubudu SDK Version 2.1.3 Release Notes
 -------------------------------------
 
 Platform Support
@@ -17,12 +17,12 @@ None
 Improvements Done
 -----------------
 
-- Fix an issue with BLE / GPS switching
+- Improved motion processing
 
 Issues Addressed
 ----------------
 
-None
+- Fix positioning while using custom accuracy treshold.
 
 Known Issues
 ------------
@@ -31,6 +31,10 @@ None
 
 Change history
 --------------
+Version 2.1.3
+	- Improved motion processing
+	- Fix positioning while using custom accuracy treshold.
+
 Version 2.1.2
 	- Fix an issue with BLE / GPS switching
 
