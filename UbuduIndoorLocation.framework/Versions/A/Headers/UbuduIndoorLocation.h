@@ -43,3 +43,5 @@
 #import <UbuduIndoorLocation/UBUPolygon.h>
 
 #import <UbuduIndoorLocation/UBUMotion.h>
+
+#import <UbuduIndoorLocation/UBUParticle.h>

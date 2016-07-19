@@ -66,6 +66,8 @@
  *
  *  @return A zone initialized with its identifier, name, tags and rectangular zone.
  */
+- (instancetype)initWithShape:(NSDictionary *)shape;
+
 - (instancetype)initWithZoneID:(NSNumber *)zoneID
                           name:(NSString *)name
                           tags:(NSArray *)tags

@@ -132,6 +132,8 @@
  */
 + (BOOL)preloadMapDataFromSourceFolder:(NSString *)folderName;
 
+- (instancetype)init __attribute__((unavailable("This method is not available. Please use sharedInstance instead.")));
+
 /**
  *  The Ubudu namespace of the application. Must be set before starting the SDK.
  *  This method fetches all needed data (maps, images) if needed. Otherwise load locally.

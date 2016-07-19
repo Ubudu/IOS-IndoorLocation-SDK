@@ -33,10 +33,10 @@
 #import <UbuduIndoorLocation/UBUZone.h>
 
 typedef enum {
+    kUnknown,
     kBLE,
     kPDR,
-    kGPS,
-    kUnknown
+    kGPS
 } PositionSource;
 
 /**

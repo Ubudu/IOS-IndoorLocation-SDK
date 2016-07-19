@@ -102,4 +102,6 @@
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didFailWithError:(nonnull NSError *)error;
 
+- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didUpdateParticles:(NSArray *)particles;
+
 @end
