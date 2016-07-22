@@ -55,6 +55,11 @@
 @property (nonatomic, strong, readonly) NSArray *zones;
 
 /**
+ *  The non walkable zones defined inside the venue. NSArray of `UBUZone`.
+ */
+@property (nonatomic, strong, readonly) NSArray *nonWalkableZones;
+
+/**
  *  Points of interest
  */
 @property (nonatomic, strong, readonly) NSArray *pois;

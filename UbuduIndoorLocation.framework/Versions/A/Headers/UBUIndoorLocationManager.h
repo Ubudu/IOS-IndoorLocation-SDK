@@ -132,6 +132,11 @@
  */
 + (BOOL)preloadMapDataFromSourceFolder:(NSString *)folderName;
 
+/**
+ *  This method returns TRUE if user is walking or was walking in past few seconds.
+ */
+- (BOOL)isMoving;
+
 - (instancetype)init __attribute__((unavailable("This method is not available. Please use sharedInstance instead.")));
 
 /**

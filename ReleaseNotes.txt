@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.1.4 Release Notes
+Ubudu SDK Version 2.2.0 Release Notes
 -------------------------------------
 
 Platform Support
@@ -12,21 +12,17 @@ Platform Support
 Features Added
 --------------
 
-- Particle filtering with GPS
-- All stored maps are preloaded into memory to make floor switching faster. Very usefull for very big maps
+- API to get info if user is moving or not
 
 Improvements Done
 -----------------
 
-- Improved PDR by updating the logic for calculating a position update
-- Simplified processing of ranged beacons. Position is calculated up to 6 times faster than before
-- Reduced lag with BLE - GPS switching
-- Improved the stability of the position
+- Further GPS improvements and stability
 
 Issues Addressed
 ----------------
 
-- Fixed checking for horizontal GPS accuracy
+None
 
 Known Issues
 ------------
@@ -35,6 +31,10 @@ None
 
 Change history
 --------------
+Version 2.2.0
+	- API to get info if user is moving or not
+	- Further GPS improvements and stability
+
 Version 2.1.4
 	- Particle filtering with GPS
 	- All stored maps are preloaded into memory to make floor switching faster. Very usefull for very big maps
