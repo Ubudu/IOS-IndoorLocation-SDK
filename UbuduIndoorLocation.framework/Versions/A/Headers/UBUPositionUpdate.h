@@ -33,7 +33,7 @@
 #import <UbuduIndoorLocation/UBUZone.h>
 
 typedef enum {
-    kUnknown,
+    kUnknownSource,
     kBLE,
     kPDR,
     kGPS
@@ -104,7 +104,7 @@ typedef enum {
  */
 @property (nonatomic, readonly) NSDate *date;
 
-@property (nonatomic, readwrite) PositionSource positionSource;
+@property (nonatomic, readonly) PositionSource positionSource;
 
 /**
  * Initializes a newly created position update object with only estimated coordinate position.

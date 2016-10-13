@@ -80,11 +80,10 @@
  *  Initializes a newly created map object.
  *
  *  @param Size of the map.
- *  @param proximity UUID of beacons in the map
  *
  *  @return Value description
  */
-- (instancetype)initWithSize:(CGSize)size andProximityUUID:(NSString *)proximityUUID;
+- (instancetype)initWithSize:(CGSize)size;
 
 /**
  * The url to the map image file

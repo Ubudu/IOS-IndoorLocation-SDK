@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.2.0 Release Notes
+Ubudu SDK Version 2.3.0 Release Notes
 -------------------------------------
 
 Platform Support
@@ -12,12 +12,16 @@ Platform Support
 Features Added
 --------------
 
-- API to get info if user is moving or not
+- None
 
 Improvements Done
 -----------------
 
-- Further GPS improvements and stability
+- Improved logic for GPS updates with freshness algorithm
+- Improved GPS - BLE switching
+- Reduced lag in updating a position while not walking
+- Reduced CPU usage
+- Speedup position computation 
 
 Issues Addressed
 ----------------
@@ -31,6 +35,13 @@ None
 
 Change history
 --------------
+Version 2.3.0
+	- Improved logic for GPS updates with freshness algorithm
+	- Improved GPS - BLE switching
+	- Reduced lag in updating a position while not walking
+	- Reduced CPU usage
+	- Speedup position computation 
+
 Version 2.2.0
 	- API to get info if user is moving or not
 	- Further GPS improvements and stability
