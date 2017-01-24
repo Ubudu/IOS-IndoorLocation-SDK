@@ -14,7 +14,8 @@ typedef enum UBUMotionMode : int {
     kUBUMotionModeSwing = 0,
     kUBUMotionModePocket,
     kUBUMotionModeHoldingPortrait,
-    kUBUMotionModeHoldingLandscape,
+    kUBUMotionModeHoldingLandscapeXUp,
+    kUBUMotionModeHoldingLandscapeXDown,
     kUBUMotionModeTable
 }UBUMotionMode;
 

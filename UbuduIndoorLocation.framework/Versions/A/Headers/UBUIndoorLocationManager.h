@@ -116,6 +116,11 @@
 @property (nonatomic, readonly) NSString *version;
 
 /**
+ *  Version of the SDK.
+ */
++ (NSString *)version;
+
+/**
  *  Singleton of indoor location manager
  */
 + (instancetype)sharedInstance;
