@@ -33,7 +33,7 @@
 /**
  *  Represents a beacon placed on a map. Immutable object.
  */
-@interface UBUBeacon : NSObject
+@interface UBUBeacon : NSObject <NSCopying>
 
 /**
  *  Major value of the beacon.

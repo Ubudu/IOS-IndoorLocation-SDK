@@ -42,7 +42,7 @@ typedef enum {
 /**
  *  Contains the estimated position in the map at a given moment.
  */
-@interface UBUPositionUpdate : NSObject
+@interface UBUPositionUpdate : NSObject <NSCopying>
 
 /**
  *  The raw estimated position of the device on the map.

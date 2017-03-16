@@ -12,10 +12,7 @@ Each addition should contain a short explanation of what added or changed.
 For more information please refer to the API documentation.
 -------------------------------------------------------------------------------
 
-Ubudu Indoor Location SDK API Changes between v2.2.0 and v2.3.0:
+Ubudu Indoor Location SDK API Changes between v2.4.0 and v2.4.1:
 --------------------------------------------------------------
 
-NEW METHOD
-[UBUIndoorLocationManager version] 
-	A class method to get version of the SDK. 
-	Same Instance method will be marked as deprecated and removed soon.
+None

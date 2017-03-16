@@ -12,14 +12,13 @@ Platform Support
 Features Added
 --------------
 
-- Position logs
+None
 
 Improvements Done
 -----------------
 
-- Improved GPS logic for better performance
-- Improved GPS - BLE switching
-- Improved map switching
+- Improved GPS / BLE and BLE / GPS switching
+- managing zones by ID - not name
 
 Issues Addressed
 ----------------
@@ -33,6 +32,10 @@ None
 
 Change history
 --------------
+Version 2.4.1
+	- Improved GPS / BLE and BLE / GPS switching
+	- managing zones by ID - not name
+	
 Version 2.4.0
 	- Position logs
 	- Improved GPS logic for better performance
