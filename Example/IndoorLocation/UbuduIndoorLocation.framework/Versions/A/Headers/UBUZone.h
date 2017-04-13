@@ -34,7 +34,7 @@
 /**
  *  Representation of a rectangular zone on the map. Immutable object.
  */
-@interface UBUZone : NSObject
+@interface UBUZone : NSObject <NSCopying>
 
 /**
  *  Identifier of the zone. Must be unique in a given map.

@@ -111,9 +111,19 @@
 @property (nonatomic) BOOL automaticFloorSwitching;
 
 /**
+ *  Motion manager used to analyze user's movement
+ */
+@property (nonatomic, strong, readonly) CMMotionManager *motionManager;
+
+/**
  *  Version of the SDK.
  */
 @property (nonatomic, readonly) NSString *version;
+
+/**
+ *  Version of the SDK.
+ */
++ (NSString *)version;
 
 /**
  *  Singleton of indoor location manager

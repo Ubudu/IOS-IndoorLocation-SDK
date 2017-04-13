@@ -33,16 +33,16 @@
 #import <UbuduIndoorLocation/UBUZone.h>
 
 typedef enum {
-    kUnknown,
-    kBLE,
+    kBLE = 0,
     kPDR,
-    kGPS
+    kGPS,
+    kUnknownSource
 } PositionSource;
 
 /**
  *  Contains the estimated position in the map at a given moment.
  */
-@interface UBUPositionUpdate : NSObject
+@interface UBUPositionUpdate : NSObject <NSCopying>
 
 /**
  *  The raw estimated position of the device on the map.
@@ -104,7 +104,7 @@ typedef enum {
  */
 @property (nonatomic, readonly) NSDate *date;
 
-@property (nonatomic, readwrite) PositionSource positionSource;
+@property (nonatomic, readonly) PositionSource positionSource;
 
 /**
  * Initializes a newly created position update object with only estimated coordinate position.

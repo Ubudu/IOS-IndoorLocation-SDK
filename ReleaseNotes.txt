@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.4.0 Release Notes
+Ubudu SDK Version 2.5.0 Release Notes
 -------------------------------------
 
 Platform Support
@@ -17,8 +17,8 @@ None
 Improvements Done
 -----------------
 
-- Improved GPS / BLE and BLE / GPS switching
-- managing zones by ID - not name
+- Better position stability by improving RSSI measurements
+- Additional logic for protection against false outdoor -> indoor switches (If you experience such cases, ask Ubudu for additional support)
 
 Issues Addressed
 ----------------
@@ -32,6 +32,10 @@ None
 
 Change history
 --------------
+Version 2.5.0
+	- Better position stability by improving RSSI measurements
+	- Additional logic for protection against false outdoor -> indoor switches (If you experience such cases, ask Ubudu for additional support) 
+
 Version 2.4.1
 	- Improved GPS / BLE and BLE / GPS switching
 	- managing zones by ID - not name
