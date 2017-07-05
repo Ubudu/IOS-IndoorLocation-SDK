@@ -91,17 +91,20 @@
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeZones:(UBUPositionUpdate *)positionUpdate;
 
-/**
- * Invoked when heading changes.
- * @param newHeading    Object containing new heading.
- */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateHeading:(CLHeading *)newHeading;
 
 /**
  * Invoked when indoor location failed with error.
  */
 - (void)locationManager:(UBUIndoorLocationManager *)locationManager didFailWithError:(nonnull NSError *)error;
 
-- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didUpdateParticles:(NSArray *)particles;
+/**
+ * Invoked when heading changes.
+ * @param newHeading    Object containing new heading.
+ */
+- (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateHeading:(CLHeading *)newHeading;
+
+- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didUpdateParticles:(NSArray *_Nullable)particles;
+
+- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didDetectSteps:(NSInteger)steps;
 
 @end

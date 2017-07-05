@@ -17,8 +17,7 @@ None
 Improvements Done
 -----------------
 
-- Better position stability by improving RSSI measurements
-- Additional logic for protection against false outdoor -> indoor switches (If you experience such cases, ask Ubudu for additional support)
+- Significatly better position stability by improving sensor fusion logic
 
 Issues Addressed
 ----------------
@@ -32,6 +31,9 @@ None
 
 Change history
 --------------
+Version 2.5.1 
+	- Significatly better position stability by improving sensor fusion logic
+
 Version 2.5.0
 	- Better position stability by improving RSSI measurements
 	- Additional logic for protection against false outdoor -> indoor switches (If you experience such cases, ask Ubudu for additional support) 

@@ -61,6 +61,11 @@
 @property (nonatomic, readonly) NSInteger rssi;
 
 /**
+ *  The flag indicates if that beacon was used to calculate the position
+ */
+@property (nonatomic, readonly) BOOL wasUsedForPositionCalculation;
+
+/**
  *  Initializes a newly created beacon object.
  *
  *  @param major    Beacon major.
