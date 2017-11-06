@@ -31,6 +31,8 @@
 #import <UbuduIndoorLocation/UBUMap.h>
 #import <UbuduIndoorLocation/UBUPositionUpdate.h>
 
+@protocol UBULogger;
+@class UBUIndoorLocationConfiguration;
 /**
  *  `UBUIndoorLocationManager` class contains the main interface to use Ubudu Indoor Location SDK.
  *
@@ -39,12 +41,12 @@
  */
 @interface UBUIndoorLocationManager : NSObject
 
+
 /**
- *  The Ubudu IL namespace of the application.
- *
- *  Need to be set to the value provided by the Ubudu manager platform in order to retrieve the venues you defined for your application.
+ *  This is the configuration for Indoor Location manager. Pass the proper configuration before starting IL.
+ *  See UbuduIndoorLocationConfiguration for more details.
  */
-@property (nonatomic, strong, readonly) NSString *appNamespace;
+@property (nonatomic, strong) UBUIndoorLocationConfiguration *configuration;
 
 /**
  *  The delegate object that receives events from the location manager, like position update events.
@@ -57,19 +59,9 @@
 @property (nonatomic, readonly, getter=isRunning) BOOL running;
 
 /**
- *  The proximity UUID of the beacons to monitor.
- */
-@property (nonatomic, copy, readonly) NSString *proximityUUID;
-
-/**
  *  The current map used in which to compute device position.
  */
 @property (nonatomic, strong, readonly) UBUMap *currentMap;
-
-/*
- *  The flag indicates if the manager should use rectified or non-rectified map. It is YES by default.
- */
-@property (nonatomic) BOOL useRectifiedMaps;
 
 /**
  *  Last known position.
@@ -77,38 +69,9 @@
 @property (nonatomic, strong, readonly) UBUPositionUpdate *lastPosition;
 
 /**
- *  The flag indicates if Indoor Location Manager is using motion filtering to improve stability of positioning
- */
-@property (nonatomic, getter=isUsingMotionMonitorFiltering) BOOL motionFiltering;
-
-/**
- *  The flag indicates if indoor location manager shoould updates heading. Default is NO.
- */
-@property (nonatomic, getter=isUpdateheadingEnabled) BOOL updateHeading;
-
-/**
- *  The flag indicates when "transition" zones are used to switch between maps.
- */
-@property (nonatomic, getter=isTransitionZonesModeEnabled) BOOL transitionZonesMode;
-
-/**
  *  The current heading of the device
  */
 @property (nonatomic) CLHeading *currentHeading;
-
-/**
- *  The accuracy treshold. Ranged beacons with accuracy higher than this treshold will not be used to estimate the position.
- *  By default, the accuracy treshold is set to 15.0.
- *
- *  DO NOT CHANGE THIS VALUE UNTIL YOU ARE SURE WHAT YOU ARE DOING.
- *  CHANGING THIS VALUE MAY REDUCE THE ACCURACY OF THE ESTIMATED POSITION.
- */
-@property (nonatomic) double accuracyTreshold;
-
-/**
- *  The flag indicates if location manager should automatically change the map or not. YES by default.
- */
-@property (nonatomic) BOOL automaticFloorSwitching;
 
 /**
  *  Motion manager used to analyze user's movement
@@ -121,6 +84,11 @@
 @property (nonatomic, readonly) NSString *version;
 
 /**
+ *  Custom logger for indoor location.
+ */
+@property (nonatomic) id <UBULogger> customLogger;
+
+/**
  *  Version of the SDK.
  */
 + (NSString *)version;
@@ -131,18 +99,6 @@
 + (instancetype)sharedInstance;
 
 /**
- * This method allows you to preload ubudu map data for your namespace.
- * @discussion To prepare a data for preloading - launch your app and fetch latest map data.
- * Plug your iOS device to your mac and in xcode open devices window and download a container for your app.
- * From documents/ubudu directory copy the folder named with your namespace to your xcode project and add it to
- * Copy Bundle Resources in Build Phases. Then call this method before starting IL.
- *
- * @param foldername - the name of the folder in the bundle’s subdirectory containing resources. it should be named with the application's namespace
- * @return return YES if resources with map were preloaded properly and returns NO if there are already some data in the folder.
- */
-+ (BOOL)preloadMapDataFromSourceFolder:(NSString *)folderName;
-
-/**
  *  This method returns TRUE if user is walking or was walking in past few seconds.
  */
 - (BOOL)isMoving;
@@ -150,34 +106,15 @@
 - (instancetype)init __attribute__((unavailable("This method is not available. Please use sharedInstance instead.")));
 
 /**
- *  The Ubudu namespace of the application. Must be set before starting the SDK.
- *  This method fetches all needed data (maps, images) if needed. Otherwise load locally.
- *  @param appNamespace The unique identifier of your application, as indicated on the manager platform.
- *  @param successBlock A block invoked when the application is successfully loaded.
- *  @param failureBlock A block invoked if the application can't be loaded.
- */
-- (void)loadApplicationForNamespace:(NSString *)appNamespace
-                            success:(void(^)())successBlock
-                            failure:(void(^)(NSError *error))failureBlock;
-
-/**
- *  The Ubudu namespace of the application. Must be set before starting the SDK. 
- *  This method fetches all needed data (maps, images) if needed. Otherwise load locally.
- *  @param appNamespace The unique identifier of your application, as indicated on the manager platform.
- *  @param shouldDownloadImagesForMaps a BOOL indicates if sdk should download images of the maps
- *  @param successBlock A block invoked when the application is successfully loaded.
- *  @param failureBlock A block invoked if the application can't be loaded.
- */
-- (void)loadApplicationForNamespace:(NSString *)appNamespace
-                     downloadImages:(BOOL)shouldDownloadImagesForMaps
-                            success:(void(^)())successBlock
-                            failure:(void(^)(NSError *error))failureBlock;
-
-
-/**
  *  Start computing the device position.
+ *  If IL started succesfully, the completion block is called with nil.
  */
-- (BOOL)start:(NSError **)error;
+- (void)startWithCompletionBlock:(void(^)(NSError *error))completionBlock;
+
+/**
+ *  Resume IL after stopping it
+ */
+- (void)resume:(NSError **)error;
 
 /**
  *  Stop computing the device position.
@@ -219,5 +156,10 @@
 - (NSArray *)storedMapUUIDs;
 
 - (NSArray *)loadAllStoredMaps;
+
+/**
+ *  Default real time logger.
+ */
+- (id <UBULogger>)defaultRealTimeLogger;
 
 @end

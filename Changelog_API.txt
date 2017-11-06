@@ -7,12 +7,15 @@ Each Error code, Class, Method, Property, Function, or MACRO will be marked as f
 'REMOVED': API code that has been deleted from the release and can no longer be
            used.
 'DEPRECATED': API code that has been marked as deprecated.
-
 Each addition should contain a short explanation of what added or changed.
 For more information please refer to the API documentation.
 -------------------------------------------------------------------------------
 
-Ubudu Indoor Location SDK API Changes between v2.5.0 and v2.5.1:
---------------------------------------------------------------
+Ubudu Indoor Location SDK API Changes between v2.5.1 and v2.6.0:
+----------------------------------------------------------------
 
-None
+- [`REMOVED`] userRectifiedMaps property -> Now IL SDK uses only rectified maps
+- [`ADDED`] configuration property to IndoorrocationManager
+- [`REMOVED`] loadApplicationForNamespace:success:failure method
+- [`CHANGED`] start:(NSError *)error method -> startWithCompletionBlock:(void(^)(NSError *error)completionBlock
+- [`ADDED`] UBUAppDataLoader to preload map data for application
