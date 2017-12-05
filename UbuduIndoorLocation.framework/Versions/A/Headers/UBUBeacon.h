@@ -84,7 +84,7 @@
  *  @param major    Beacon major.
  *  @param minor    Beacon minor.
  *  @param position Beacon position.
- *  @param CLBeacon CLBeacon
+ *  @param clBeacon CLBeacon
  *  @param proximityUUID proximity UUID of the beacon 
  *
  *  @return A map initialized with its major, minor, position, proximity UUID and CLBeacon.

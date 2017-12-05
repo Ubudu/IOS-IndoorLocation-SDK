@@ -1,6 +1,6 @@
 
 -------------------------------------
-Ubudu SDK Version 2.6.0 Release Notes
+Ubudu SDK Version 2.6.1 Release Notes
 -------------------------------------
 
 Platform Support
@@ -12,25 +12,32 @@ Platform Support
 Features Added
 --------------
 
-- Custom logger + default "real time logger"
+None
 
 Improvements Done
 -----------------
 
-- Simplified API
+None
 
 Issues Addressed
 ----------------
 
-- Fix issues related to starting IL
+- Fix issues related to location accuracy and latency
+- Add zones to  position log
 
 Known Issues
 ------------
 
-None
+- In some cases, it is possible to be switched from GPS localization to BLE location while being truly outdoor but nearby the venue.
 
 Change history
 --------------
+
+Version 2.6.1
+	- Fix issues related to location accuracy and latency
+	- Add zones to  position log
+	- In some cases, it is possible to be switched from GPS localization to BLE location while being truly outdoor but nearby the venue.
+
 Version 2.6.0
 	- Custom logger + default "real time logger"
 	- Simplified API

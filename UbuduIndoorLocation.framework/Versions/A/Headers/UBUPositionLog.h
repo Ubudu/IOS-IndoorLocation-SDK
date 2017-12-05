@@ -19,6 +19,7 @@
 @property (nonatomic, strong, readonly) NSString        *uuid;              // string?
 @property (nonatomic, strong, readonly) NSString        *mapUUID;           // string?
 @property (nonatomic, strong, readonly) NSString        *timestamp;         // string, because we want a forced format of that string
+@property (nonatomic, strong, readonly) NSArray         *zones;
 @property (nonatomic, strong, readonly) UBUDeviceInfo   *deviceInfo;
 @property (nonatomic, readonly) PositionSource          origin;
 @property (nonatomic, readonly) CLLocationCoordinate2D  locationCoordinate;
@@ -27,7 +28,8 @@
                                 uuid:(NSString *)uuid
                              mapUUID:(NSString *)mapUUID
                   locationCoordinate:(CLLocationCoordinate2D)coordinate
-                              origin:(PositionSource)positionSource;
+                              origin:(PositionSource)positionSource
+                               zones:(NSArray *)zones;
 
 + (UBUPositionLog *)logWithDictionary:(NSDictionary *)logDictionary;
 

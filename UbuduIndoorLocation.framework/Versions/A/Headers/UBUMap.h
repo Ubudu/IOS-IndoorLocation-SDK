@@ -79,7 +79,7 @@
 /**
  *  Initializes a newly created map object.
  *
- *  @param Size of the map.
+ *  @param size of the map.
  *
  *  @return Value description
  */

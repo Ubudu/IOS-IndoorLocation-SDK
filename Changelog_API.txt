@@ -11,11 +11,7 @@ Each addition should contain a short explanation of what added or changed.
 For more information please refer to the API documentation.
 -------------------------------------------------------------------------------
 
-Ubudu Indoor Location SDK API Changes between v2.5.1 and v2.6.0:
+Ubudu Indoor Location SDK API Changes between v2.6.1 and v2.6.0:
 ----------------------------------------------------------------
 
-- [`REMOVED`] userRectifiedMaps property -> Now IL SDK uses only rectified maps
-- [`ADDED`] configuration property to IndoorrocationManager
-- [`REMOVED`] loadApplicationForNamespace:success:failure method
-- [`CHANGED`] start:(NSError *)error method -> startWithCompletionBlock:(void(^)(NSError *error)completionBlock
-- [`ADDED`] UBUAppDataLoader to preload map data for application
+none

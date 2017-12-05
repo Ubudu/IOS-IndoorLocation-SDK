@@ -17,7 +17,7 @@
  * From documents/ubudu directory copy the folder named with your namespace to your xcode project and add it to
  * Copy Bundle Resources in Build Phases. Then call this method before starting IL.
  *
- * @param foldername - the name of the folder in the bundle’s subdirectory containing resources. it should be named with the application's namespace
+ * @param folderName - the name of the folder in the bundle’s subdirectory containing resources. it should be named with the application's namespace
  * @return return YES if resources with map were preloaded properly and returns NO if there are already some data in the folder.
  */
 + (BOOL)preloadMapDataFromSourceFolder:(NSString *)folderName;

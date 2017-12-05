@@ -130,7 +130,7 @@
 
 /**
  *  The method to force to switch the current map.
- *  @param the map to wich we are going to switch.
+ *  @param map to wich we are going to switch.
  */
 - (void)forceToSwtichCurrentMap:(UBUMap *)map;
 
