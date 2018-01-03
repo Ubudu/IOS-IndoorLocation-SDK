@@ -58,22 +58,39 @@
 /**
  *  Initializes a newly created zone object.
  *
- *  @param zoneID Identifier of the zone.
- *  @param name   Name of the zone.
- *  @param tags   Tags assigned to the zone.
- *  @param origin Origin of the zone rectangle.
- *  @param size   Size of the zone rectangle.
+ *  @param shape The shape of the zone.
  *
- *  @return A zone initialized with its identifier, name, tags and rectangular zone.
+ *  @return A zone initialized with its shape.
  */
 - (instancetype)initWithShape:(NSDictionary *)shape;
 
+/**
+ *  Initializes a newly created zone object.
+ *
+ *  @param zoneID Identifier of the zone.
+ *  @param name   Name of the zone.
+ *  @param tags   Tags assigned to the zone.
+ *  @param shape  The shape of the zone.
+ *
+ *  @return A zone initialized with its identifier, name, tags and shape of the zone.
+ */
 - (instancetype)initWithZoneID:(NSNumber *)zoneID
                           name:(NSString *)name
                           tags:(NSArray *)tags
                          shape:(NSDictionary *)shape;
 
 
+/**
+ *  Initializes a newly created zone object.
+ *
+ *  @param zoneID Identifier of the zone.
+ *  @param name   Name of the zone.
+ *  @param tags   Tags assigned to the zone.
+ *  @param shape  The shape of the zone.
+ *  @param color  The color of the zone
+ *
+ *  @return A zone initialized with its identifier, name, tags and rectangular zone.
+ */
 - (instancetype)initWithZoneID:(NSNumber *)zoneID
                           name:(NSString *)name
                           tags:(NSArray *)tags

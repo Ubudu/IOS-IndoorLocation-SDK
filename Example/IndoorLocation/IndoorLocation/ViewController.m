@@ -37,26 +37,25 @@
     
     self.locationManager = [UBUIndoorLocationManager sharedInstance];
     self.locationManager.delegate = self;
-    self.locationManager.motionFiltering = YES;
-    self.locationManager.updateHeading = YES;
+
+    UBUIndoorLocationConfiguration *ilConfig = [[UBUIndoorLocationConfiguration alloc] initWithAppNamespace:namespace];
+    ilConfig.motionFiltering = YES;
+    ilConfig.updateHeading = YES;
+    ilConfig.localizationMode = kBLEMode;
     
-    [self.locationManager loadApplicationForNamespace:namespace
-                                       downloadImages:NO
-                                              success:^{
-                                                  NSLog(@"We've loaded application for namespace: %@", namespace);
-                                                  
-                                                  NSError *error = nil;
-                                                  BOOL started = [_locationManager start:&error];
-                                                  if (error == nil && started == YES) { NSLog(@"location manager started"); }
-                                                  else { NSLog(@"error while starting IL manager: %@", error); }
-                                                  
-                                              } failure:^(NSError *error) {
-                                                  NSLog(@"Error while loading application for namespace: %@", error.localizedDescription);
-                                              }];
+    self.locationManager.configuration = ilConfig;
+    
+    [self.locationManager startWithCompletionBlock:^(NSError *error) {
+        
+        if(error != nil) {
+            NSLog(@"Error while loading application for namespace: %@", error.localizedDescription);
+            return;
+        }
+     
+        NSLog(@"location manager started");
+    }];
     
 }
-
-
 #pragma mark - Private properties
 
 - (MKPointAnnotation *)userPoint

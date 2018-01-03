@@ -61,6 +61,11 @@
 @property (nonatomic, readonly) NSInteger rssi;
 
 /**
+ *  The flag indicates if that beacon was used to calculate the position
+ */
+@property (nonatomic, readonly) BOOL wasUsedForPositionCalculation;
+
+/**
  *  Initializes a newly created beacon object.
  *
  *  @param major    Beacon major.
@@ -79,7 +84,7 @@
  *  @param major    Beacon major.
  *  @param minor    Beacon minor.
  *  @param position Beacon position.
- *  @param CLBeacon CLBeacon
+ *  @param clBeacon CLBeacon
  *  @param proximityUUID proximity UUID of the beacon 
  *
  *  @return A map initialized with its major, minor, position, proximity UUID and CLBeacon.

@@ -51,7 +51,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param beaconsUpdates  NSArray of `UBUBeacon` representing the beacons visible around the device and involved in the map configuration.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateBeacons:(NSArray *)beaconsUpdates;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didUpdateBeacons:(NSArray *_Nonnull)beaconsUpdates;
 
 /**
  *  Invoked when the position of the device changes.
@@ -59,7 +59,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the estimated position and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangePosition:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didChangePosition:(UBUPositionUpdate *_Nonnull)positionUpdate;
 
 /**
  *  Invoked when the closest navigable point from the estimated position changes.
@@ -67,7 +67,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest navigable point and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestNavigablePoint:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didChangeClosestNavigablePoint:(UBUPositionUpdate *_Nonnull)positionUpdate;
 
 /**
  *  Invoked when the closest beacon from the estimated position changes.
@@ -75,7 +75,7 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest beacon and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestBeacon:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didChangeClosestBeacon:(UBUPositionUpdate *_Nonnull)positionUpdate;
 
 /**
  *  Invoked when the closest zone from the estimated position changes.
@@ -83,25 +83,28 @@
  *  @param locationManager The location manager that generated the event.
  *  @param positionUpdate  The position update object containing the closest zone and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeClosestZone:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didChangeClosestZone:(UBUPositionUpdate *_Nonnull)positionUpdate;
 
 /**
  * Invoked when current zones from the estimated position changes.
  * @param positionUpdate  The position update object containing current zones and other related info.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didChangeZones:(UBUPositionUpdate *)positionUpdate;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didChangeZones:(UBUPositionUpdate *_Nonnull)positionUpdate;
+
+
+/**
+ * Invoked when indoor location failed with error.
+ */
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didFailWithError:(nonnull NSError *)error;
 
 /**
  * Invoked when heading changes.
  * @param newHeading    Object containing new heading.
  */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didUpdateHeading:(CLHeading *)newHeading;
+- (void)locationManager:(UBUIndoorLocationManager *_Nonnull)locationManager didUpdateHeading:(CLHeading *_Nonnull)newHeading;
 
-/**
- * Invoked when indoor location failed with error.
- */
-- (void)locationManager:(UBUIndoorLocationManager *)locationManager didFailWithError:(nonnull NSError *)error;
+- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didUpdateParticles:(NSArray *_Nullable)particles;
 
-- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didUpdateParticles:(NSArray *)particles;
+- (void)locationManager:(nonnull UBUIndoorLocationManager *)locationManager didDetectSteps:(NSInteger)steps;
 
 @end

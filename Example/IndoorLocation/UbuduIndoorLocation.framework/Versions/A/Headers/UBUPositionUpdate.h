@@ -36,7 +36,8 @@ typedef enum {
     kBLE = 0,
     kPDR,
     kGPS,
-    kUnknownSource
+    kUnknownSource,
+    kBLEAttractor
 } PositionSource;
 
 /**
@@ -105,6 +106,8 @@ typedef enum {
 @property (nonatomic, readonly) NSDate *date;
 
 @property (nonatomic, readonly) PositionSource positionSource;
+
+@property (nonatomic, readonly) NSArray *beacons;
 
 /**
  * Initializes a newly created position update object with only estimated coordinate position.
