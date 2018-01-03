@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    kBLEMode = 0,
+    kBLEAttractorMode
+} LocalizationMode;
+
 @interface UBUIndoorLocationConfiguration : NSObject
 
 /**
@@ -45,6 +50,23 @@
  *  CHANGING THIS VALUE MAY REDUCE THE ACCURACY OF THE ESTIMATED POSITION.
  */
 @property (nonatomic)                                           double accuracyTreshold;
+
+/**
+ *  This property allows to choose between available modes (LocalizationMode). The default one is kBLEMode which provides you posible best location.
+ *  Mode is kBLEAttractorMode which reduces the latency on the cost of position precision.
+ */
+@property (nonatomic)                                           LocalizationMode localizationMode;
+
+/**
+ * The desired overhead of the strongest beacon for attractor mode.
+ * Beacon must be strongest on the list but also stronger enough from the second strongest beacon for its position to become the new position update.
+ */
+@property (nonatomic)                                           NSInteger   attractorRssiDifferenceTreshold;
+
+/**
+ * Number of checks of the rssi difference between strongest beacon and second strongest beacon before accepting the new position
+ */
+@property (nonatomic)                                           NSInteger   attractorChecksCount;
 
 /**
  *  A method to init a configuration with a namespaceslack

@@ -1,18 +1,17 @@
 
 -------------------------------------
-Ubudu SDK Version 2.6.1 Release Notes
+Ubudu SDK Version 2.7.0 Release Notes
 -------------------------------------
 
 Platform Support
 ----------------
-	- iOS 7.x or higher
-	- iPhone 4S / iPad 3rd gen. / iPod 5th gen. or more recent
-
+	- iOS 8.x or higher
+	- iPhone 5s or more recent
 
 Features Added
 --------------
 
-None
+- Add attractor mode of operation
 
 Improvements Done
 -----------------
@@ -22,8 +21,7 @@ None
 Issues Addressed
 ----------------
 
-- Fix issues related to location accuracy and latency
-- Add zones to  position log
+None
 
 Known Issues
 ------------
@@ -32,6 +30,8 @@ Known Issues
 
 Change history
 --------------
+Version 2.7.0
+	- Add attractor mode of operation
 
 Version 2.6.1
 	- Fix issues related to location accuracy and latency
