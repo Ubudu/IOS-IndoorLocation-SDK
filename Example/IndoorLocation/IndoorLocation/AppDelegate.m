@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <UbuduIndoorLocation/UbuduIndoorLocation.h>
 
+@import GoogleMaps;
+
 @interface AppDelegate ()
 
 @end
@@ -18,7 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+
+    NSString *apiKey = nil;
+    NSAssert(apiKey != nil, @"You need to provide your own google api key");
+    [GMSServices provideAPIKey:apiKey];
     UBUIndoorLocationManager *ilManager = [UBUIndoorLocationManager sharedInstance];
     
     return YES;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1288DD20D92E65007F5A2F /* Mercator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1288DB20D92E65007F5A2F /* Mercator.m */; };
+		1D1288DE20D92E65007F5A2F /* CachedTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1288DC20D92E65007F5A2F /* CachedTileLayer.m */; };
+		1D1288E620D93E56007F5A2F /* PRPositionMarkerImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1288E420D93E56007F5A2F /* PRPositionMarkerImage.m */; };
+		1D1288E720D93E56007F5A2F /* MarkerImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1288E520D93E56007F5A2F /* MarkerImage.m */; };
 		1D6607001D805CD4001BCF6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6606FF1D805CD4001BCF6E /* main.m */; };
 		1D6607031D805CD4001BCF6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6607021D805CD4001BCF6E /* AppDelegate.m */; };
 		1D6607061D805CD4001BCF6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6607051D805CD4001BCF6E /* ViewController.m */; };
@@ -18,9 +22,18 @@
 		1D66071E1D80AB46001BCF6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D66071D1D80AB46001BCF6E /* CoreGraphics.framework */; };
 		1D6607201D80AB52001BCF6E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D66071F1D80AB52001BCF6E /* CoreLocation.framework */; };
 		1D6607221D80AFE4001BCF6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6607211D80AFE4001BCF6E /* MapKit.framework */; };
+		82501961D77C86612498C750 /* libPods-IndoorLocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5D4563FAEF1C5318DC4818 /* libPods-IndoorLocation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1288D920D92E65007F5A2F /* Mercator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mercator.h; sourceTree = "<group>"; };
+		1D1288DA20D92E65007F5A2F /* CachedTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachedTileLayer.h; sourceTree = "<group>"; };
+		1D1288DB20D92E65007F5A2F /* Mercator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mercator.m; sourceTree = "<group>"; };
+		1D1288DC20D92E65007F5A2F /* CachedTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachedTileLayer.m; sourceTree = "<group>"; };
+		1D1288E220D93E56007F5A2F /* MarkerImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerImage.h; sourceTree = "<group>"; };
+		1D1288E320D93E56007F5A2F /* PRPositionMarkerImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPositionMarkerImage.h; sourceTree = "<group>"; };
+		1D1288E420D93E56007F5A2F /* PRPositionMarkerImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPositionMarkerImage.m; sourceTree = "<group>"; };
+		1D1288E520D93E56007F5A2F /* MarkerImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerImage.m; sourceTree = "<group>"; };
 		1D6606FB1D805CD4001BCF6E /* IndoorLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IndoorLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6606FF1D805CD4001BCF6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D6607011D805CD4001BCF6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +49,9 @@
 		1D66071D1D80AB46001BCF6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D66071F1D80AB52001BCF6E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1D6607211D80AFE4001BCF6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2D414F3689DC4C09ED233A57 /* Pods-IndoorLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorLocation/Pods-IndoorLocation.release.xcconfig"; sourceTree = "<group>"; };
+		7A5D4563FAEF1C5318DC4818 /* libPods-IndoorLocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IndoorLocation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1D2797B0E4A641CB351292 /* Pods-IndoorLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndoorLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IndoorLocation/Pods-IndoorLocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,18 +64,40 @@
 				1D66071E1D80AB46001BCF6E /* CoreGraphics.framework in Frameworks */,
 				1D66071C1D80AB36001BCF6E /* libc++.tbd in Frameworks */,
 				1D6607191D805FA5001BCF6E /* UbuduIndoorLocation.framework in Frameworks */,
+				82501961D77C86612498C750 /* libPods-IndoorLocation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02CE0DA271035D28B75D663A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF1D2797B0E4A641CB351292 /* Pods-IndoorLocation.debug.xcconfig */,
+				2D414F3689DC4C09ED233A57 /* Pods-IndoorLocation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1D1288DF20D92E71007F5A2F /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				1D1288DA20D92E65007F5A2F /* CachedTileLayer.h */,
+				1D1288DC20D92E65007F5A2F /* CachedTileLayer.m */,
+				1D1288D920D92E65007F5A2F /* Mercator.h */,
+				1D1288DB20D92E65007F5A2F /* Mercator.m */,
+			);
+			name = Tiles;
+			sourceTree = "<group>";
+		};
 		1D6606F21D805CD4001BCF6E = {
 			isa = PBXGroup;
 			children = (
 				1D6607171D805EF0001BCF6E /* Frameworks */,
 				1D6606FD1D805CD4001BCF6E /* IndoorLocation */,
 				1D6606FC1D805CD4001BCF6E /* Products */,
+				02CE0DA271035D28B75D663A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +112,11 @@
 		1D6606FD1D805CD4001BCF6E /* IndoorLocation */ = {
 			isa = PBXGroup;
 			children = (
+				1D1288DF20D92E71007F5A2F /* Tiles */,
+				1D1288E220D93E56007F5A2F /* MarkerImage.h */,
+				1D1288E520D93E56007F5A2F /* MarkerImage.m */,
+				1D1288E320D93E56007F5A2F /* PRPositionMarkerImage.h */,
+				1D1288E420D93E56007F5A2F /* PRPositionMarkerImage.m */,
 				1D6607011D805CD4001BCF6E /* AppDelegate.h */,
 				1D6607021D805CD4001BCF6E /* AppDelegate.m */,
 				1D6607041D805CD4001BCF6E /* ViewController.h */,
@@ -103,6 +146,7 @@
 				1D66071F1D80AB52001BCF6E /* CoreLocation.framework */,
 				1D66071D1D80AB46001BCF6E /* CoreGraphics.framework */,
 				1D6607181D805FA5001BCF6E /* UbuduIndoorLocation.framework */,
+				7A5D4563FAEF1C5318DC4818 /* libPods-IndoorLocation.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6607121D805CD4001BCF6E /* Build configuration list for PBXNativeTarget "IndoorLocation" */;
 			buildPhases = (
+				72E78811B446318EA80B756D /* [CP] Check Pods Manifest.lock */,
 				1D6606F71D805CD4001BCF6E /* Sources */,
 				1D6606F81D805CD4001BCF6E /* Frameworks */,
 				1D6606F91D805CD4001BCF6E /* Resources */,
+				B72371A900CA0BD6F8349E08 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +184,7 @@
 				TargetAttributes = {
 					1D6606FA1D805CD4001BCF6E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = MUDD5D476E;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -173,13 +220,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72E78811B446318EA80B756D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IndoorLocation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B72371A900CA0BD6F8349E08 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IndoorLocation/Pods-IndoorLocation-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IndoorLocation/Pods-IndoorLocation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D6606F71D805CD4001BCF6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1288E620D93E56007F5A2F /* PRPositionMarkerImage.m in Sources */,
+				1D1288E720D93E56007F5A2F /* MarkerImage.m in Sources */,
 				1D6607061D805CD4001BCF6E /* ViewController.m in Sources */,
+				1D1288DE20D92E65007F5A2F /* CachedTileLayer.m in Sources */,
 				1D6607031D805CD4001BCF6E /* AppDelegate.m in Sources */,
+				1D1288DD20D92E65007F5A2F /* Mercator.m in Sources */,
 				1D6607001D805CD4001BCF6E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +382,12 @@
 		};
 		1D6607131D805CD4001BCF6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1D2797B0E4A641CB351292 /* Pods-IndoorLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MUDD5D476E;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -305,13 +396,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ubudu.IndoorLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "f1242a67-5681-42f5-a9e3-f08040d0be46";
+				PROVISIONING_PROFILE_SPECIFIER = ubudu_zioolek_wildcard;
 			};
 			name = Debug;
 		};
 		1D6607141D805CD4001BCF6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D414F3689DC4C09ED233A57 /* Pods-IndoorLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

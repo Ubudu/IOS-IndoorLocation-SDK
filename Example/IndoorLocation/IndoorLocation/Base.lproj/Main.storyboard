@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,31 +18,29 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTZ-De-OXw">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="24p-Fy-x1P"/>
-                                </connections>
-                            </mapView>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btg-OC-8QS" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OTZ-De-OXw" secondAttribute="trailing" id="W4C-Hd-PAn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OTZ-De-OXw" secondAttribute="bottom" id="ePD-tX-mFT"/>
-                            <constraint firstItem="OTZ-De-OXw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="osY-20-sWM"/>
-                            <constraint firstItem="OTZ-De-OXw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zhw-0K-M7g"/>
+                            <constraint firstItem="Btg-OC-8QS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Le-dE-wVz"/>
+                            <constraint firstAttribute="trailing" secondItem="Btg-OC-8QS" secondAttribute="trailing" id="gAr-rA-NnL"/>
+                            <constraint firstItem="Btg-OC-8QS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nec-ub-iXW"/>
+                            <constraint firstAttribute="bottom" secondItem="Btg-OC-8QS" secondAttribute="bottom" id="q3Q-AX-zSH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="OTZ-De-OXw" id="WC8-jz-iBJ"/>
+                        <outlet property="mapView" destination="Btg-OC-8QS" id="Bwn-6W-jsO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="463"/>
+            <point key="canvasLocation" x="696.79999999999995" y="462.5615763546798"/>
         </scene>
     </scenes>
 </document>
