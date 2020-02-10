@@ -1,0 +1,11 @@
+framework module UbuduSwiftIndoorLocation {
+  umbrella header "UbuduSwiftIndoorLocation.h"
+
+  export *
+  module * { export * }
+}
+
+module UbuduSwiftIndoorLocation.Swift {
+    header "UbuduSwiftIndoorLocation-Swift.h"
+    requires objc
+}
